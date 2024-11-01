@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro de Filme</title>
+</head>
+<body>
+    <h1 id="titulo">Bem vindo ao formulário de cadastro , </h1>
+
+    <input type="text" id="nomeUsuario" placeholder="Nome do usuário"><br>
+    <input type="text" id="nomeFilmeBr" placeholder="Nome do filme no Brasil"><br>
+    <input type="text" id="nomeFilmeOrig" placeholder="Nome do filme no original"><br>
+    <input type="text" id="nomeDiretor" placeholder="Nome do diretor"><br> 
+
+    <h2>Data de estreia no cinema:</h2>
+
+    <input type="date" id="dataDeEstreia">
+
+    <h2>Classificação indicativa:</h2>
+
+    <input checked type="radio" name="classific" value="livre">Livre</input><br>
+    <input type="radio" name="classific" value="10">Não recomendado para para menores de 10 anos</input><br>
+    <input type="radio" name="classific" value="12">Não recomendado para para menores de 12 anos</input><br>
+    <input type="radio" name="classific" value="14">Não recomendado para para menores de 14 anos</input><br>
+    <input type="radio" name="classific" value="16">Não recomendado para para menores de 16 anos</input><br>
+    <input type="radio" name="classific" value="18">Não recomendado para para menores de 18 anos</input><br>
+
+    <h2>Gênero</h2>
+
+    <select id="genero" name="Genero">
+        <option disabled selected>Genero</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Ação">Ação</option>
+        <option value="Animação">Animação</option>
+        <option value="Romance">Romance</option>
+        <option value="Musical">Musical</option>
+        <option value="Suspense">Suspense</option>
+        <option value="Terror">Terror</option>
+        <option value="Ficção Cientifica">Ficção Cientifica</option>
+    </select>
+
+    <h2>Idiomas de áudio disponíveis</h2>
+
+    <input type="checkbox" id="idioma">Inglês</input>
+    <input type="checkbox" id="idioma">Português</input>
+    <input type="checkbox" id="idioma">Espanhol</input>
+    <input type="checkbox" id="idioma">Outros</input><br><br>
+
+    <input type="checkbox" id="termos"><strong>Termo de autorização para o streaming “Filme liberado para streaming”</strong></input><br><br>
+
+    <button id="fazerCadastro">Cadastrar</button>
+    <p class="aviso" id="aviso">*Há áreas em branco, por favor, preencha para que seja possível o cadastro!!</p>
+
+    <script src="js/entrada.js"></script>
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
