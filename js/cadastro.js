@@ -5,16 +5,19 @@ fazerCadastro.addEventListener('click', () => {
 })
 
 function validarInformacoes () {
-    let aviso = document.getElementById('aviso')
-    let nomeUsuario = document.getElementById('nomeUsuario')
-    let nomeFilmeBr = document.getElementById('nomeFilmeBr')
-    let nomeFilmeOrig = document.getElementById('nomeFilmeOrig')
-    let nomeDiretor = document.getElementById('nomeDiretor')
-    let dataDeEstreia = document.getElementById('dataDeEstreia')
-    let classific = document.getElementById('classific')
-    let genero = document.getElementById('genero')
-    let idioma = document.getElementById('idioma')
-    let termos = document.getElementById('termos')
+    var aviso = document.getElementById('aviso')
+    var nomeUsuario = document.getElementById('nomeUsuario')
+    var nomeFilmeBr = document.getElementById('nomeFilmeBr')
+    var nomeFilmeOrig = document.getElementById('nomeFilmeOrig')
+    var nomeDiretor = document.getElementById('nomeDiretor')
+    var dataDeEstreia = document.getElementById('dataDeEstreia')
+    var classific = document.getElementById('classific')
+    const selecionado = document.querySelector('input[name="classific"]:checked');
+    var genero = document.getElementById('genero')
+    var idioma = document.getElementById('idioma')
+    const checkboxes = document.querySelectorAll('.idioma');
+    const idiomasSelecionados = [];
+    var termos = document.getElementById('termos')
 
     if(nomeUsuario.value == '') {
         nomeUsuario.style.borderColor = 'red'
@@ -79,6 +82,21 @@ function validarInformacoes () {
     } else {
         termos.style.borderColor = 'green'
     }
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            idiomasSelecionados.push(checkbox.value);
+        }
+    });
+    
+    localStorage.setItem("Nome de Usuário", nomeUsuario.value);
+    localStorage.setItem("Nome do filme no Brasil", nomeFilmeBr.value);
+    localStorage.setItem("Nome do filme original", nomeFilmeOrig.value);
+    localStorage.setItem("Nome do Diretor", nomeDiretor.value);
+    localStorage.setItem("Data da estreia", dataDeEstreia.value);
+    localStorage.setItem("Classificação", selecionado.value);
+    localStorage.setItem("Gênero", genero.value);
+    localStorage.setItem("Idiomas", JSON.stringify(idiomasSelecionados));
 
     aviso.style.display = 'none'
     alert("Seu cadastro foi finalizado!")

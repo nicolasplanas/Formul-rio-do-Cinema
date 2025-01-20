@@ -7,7 +7,7 @@
     <title>Cadastro de Filme</title>
 </head>
 <body>
-    <h1 id="titulo">Bem vindo ao formulário de cadastro , </h1>
+    <h1 id="titulo">Bem vindo ao formulário de cadastro</h1>
 
     <input type="text" id="nomeUsuario" placeholder="Nome do usuário"><br>
     <input type="text" id="nomeFilmeBr" placeholder="Nome do filme no Brasil"><br>
@@ -20,12 +20,12 @@
 
     <h2>Classificação indicativa:</h2>
 
-    <input checked type="radio" name="classific" value="livre">Livre</input><br>
-    <input type="radio" name="classific" value="10">Não recomendado para para menores de 10 anos</input><br>
-    <input type="radio" name="classific" value="12">Não recomendado para para menores de 12 anos</input><br>
-    <input type="radio" name="classific" value="14">Não recomendado para para menores de 14 anos</input><br>
-    <input type="radio" name="classific" value="16">Não recomendado para para menores de 16 anos</input><br>
-    <input type="radio" name="classific" value="18">Não recomendado para para menores de 18 anos</input><br>
+    <input type="radio" name="classific" id="classific" value="Livre">Livre</input><br>
+    <input type="radio" name="classific" id="classific" value="Não recomendado para para menores de 10 anos">Não recomendado para para menores de 10 anos</input><br>
+    <input type="radio" name="classific" id="classific" value="Não recomendado para para menores de 12 anos">Não recomendado para para menores de 12 anos</input><br>
+    <input type="radio" name="classific" id="classific" value="Não recomendado para para menores de 14 anos">Não recomendado para para menores de 14 anos</input><br>
+    <input type="radio" name="classific" id="classific" value="Não recomendado para para menores de 16 anos">Não recomendado para para menores de 16 anos</input><br>
+    <input type="radio" name="classific" id="classific" value="Não recomendado para para menores de 18 anos">Não recomendado para para menores de 18 anos</input><br>
 
     <h2>Gênero</h2>
 
@@ -43,17 +43,16 @@
 
     <h2>Idiomas de áudio disponíveis</h2>
 
-    <input type="checkbox" id="idioma">Inglês</input>
-    <input type="checkbox" id="idioma">Português</input>
-    <input type="checkbox" id="idioma">Espanhol</input>
-    <input type="checkbox" id="idioma">Outros</input><br><br>
+    <input type="checkbox" class="idioma" id="idioma" value="Inglês">Inglês</input>
+    <input type="checkbox" class="idioma" id="idioma" value="Português">Português</input>
+    <input type="checkbox" class="idioma" id="idioma" value="Espanhol">Espanhol</input>
+    <input type="checkbox" class="idioma" id="idioma" value="Outros">Outros</input><br><br>
 
     <input type="checkbox" id="termos"><strong>Termo de autorização para o streaming “Filme liberado para streaming”</strong></input><br><br>
 
     <button id="fazerCadastro">Cadastrar</button>
     <p class="aviso" id="aviso">*Há áreas em branco, por favor, preencha para que seja possível o cadastro!!</p>
 
-    <script src="js/entrada.js"></script>
     <script src="js/cadastro.js"></script>
 </body>
 </html>
